@@ -81,8 +81,18 @@
                 margin: 1em 0;
         }
         
-        .post .caption {
+        .post .caption, .pagination {
                 margin: 1em 0;
+        }
+        
+        .pagination {
+                width: 100%;
+                float: right;
+        }
+        
+        .pagination a {
+                float: right;
+                margin-left: 1em;
         }
         
         footer.actions {
@@ -298,14 +308,14 @@
         </div>
         {/block:Posts}
            
-            <div class="pagination">
-            {block:PreviousPage}
-                <a href="{PreviousPage}" class="previous"><i class="icon-prev"></i></a>
-            {/block:PreviousPage}
-            {block:NextPage}
-                <a href="{NextPage}" class="next"><i class="icon-next"></i></a>
-            {/block:NextPage}
-            </div>
+        <div class="pagination">
+        {block:NextPage}
+            <a href="{NextPage}" class="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        {/block:NextPage}
+        {block:PreviousPage}
+            <a href="{PreviousPage}" class="previous"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        {/block:PreviousPage}
+        </div>
         <!--col-->
         </div>
     <!--row-->
